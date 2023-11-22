@@ -1,4 +1,10 @@
 # Handling missing values 
+# Table of Contents
+- [Introduction](#introduction)
+- [What is a Missing Value](#what-is-a-missing-value)
+- [Reasons for missing data from the dataset](#reasons-for-missing-data-from-the-dataset)
+- [Different types of Missing Data](#different-types-of-missing-data)
+- [Importance of handling Missing Data](#importance-of-handling-missing-data)
 
 ## Introduction
 The real-world data often has a lot of missing values and inherent issue in data collection, especially when working with large datasets. 
