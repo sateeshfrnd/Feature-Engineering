@@ -60,3 +60,9 @@ It can happen due to the reluctance of people to provide the required informatio
 For example, suppose you are collecting data on the income and job satisfaction of employees in a company. If employees who are less satisfied with their jobs are more likely to refuse to report their income, then the data is not missing at random. In this case, the missingness is dependent on job satisfaction, which is not directly observed or measured.
 
 **In the case of MNAR as well, the statistical analysis might result in bias.**
+
+## Importance of handling Missing Data
+It is important to handle the missing values appropriately, since
+- Many machine learning algorithms fail if the dataset contains missing values. However, algorithms like K-nearest and Naive Bayes support data with missing values.
+- You may end up building a biased machine learning model, leading to incorrect results if the missing values are not handled properly.
+- Missing data can lead to a lack of precision in the statistical analysis.
