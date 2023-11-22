@@ -5,6 +5,7 @@
 - [Reasons for missing data from the dataset](#reasons-for-missing-data-from-the-dataset)
 - [Different types of Missing Data](#different-types-of-missing-data)
 - [Importance of handling Missing Data](#importance-of-handling-missing-data)
+- [Strategies to handle missing values](#strategies-to-handle-missing-values)
 
 ## Introduction
 The real-world data often has a lot of missing values and inherent issue in data collection, especially when working with large datasets. 
@@ -72,3 +73,47 @@ It is important to handle the missing values appropriately, since
 - Many machine learning algorithms fail if the dataset contains missing values. However, algorithms like K-nearest and Naive Bayes support data with missing values.
 - You may end up building a biased machine learning model, leading to incorrect results if the missing values are not handled properly.
 - Missing data can lead to a lack of precision in the statistical analysis.
+- 
+## Strategies to handle missing values
+Below are the list of popular strategies to handle missing values in a dataset:
+
+### Deleting Rows with missing values
+Generally, this approach is not recommended. It is one of the quick and dirty techniques one can use to deal with missing values. If the missing value is of the type Missing Not At Random (MNAR), then it should not be deleted.
+
+If the missing value is of type Missing At Random (MAR) or Missing Completely At Random (MCAR) then it can be deleted (In the analysis, all cases with available data are utilized, while missing observations are assumed to be completely random (MCAR) and addressed through pairwise deletion.)
+
+Remove observations (entire row) or features (entire column) with missing values from the dataset.
+
+Pros
+- Straightforward and simple to use.
+- Beneficial when missing values have no importance. 
+- A model trained with the removal of all missing values creates a robust model.
+Cons
+- Using this approach can lead to end up deleting some useful data from the dataset.
+- This is not appropriate when the data is not missing completely at random.
+- Works poorly if the percentage of missing values is excessive in comparison to the complete dataset.
+- Data set with a large proportion of missing value can be significantly decreased, which can impact the result of all statistical analysis on that data set. 
+
+### Impute missing values for continuous variable (Mean/Medain)
+Columns in the dataset which are having numeric continuous values can be replaced with the mean, median, or mode of remaining values in the dataset.
+
+Normal distribution is the ideal scenario. Unfortunately, it is not always the case. This is where the median imputation can be helpful because it is not sensitive to outliers.
+
+Pros:
+- Simplicity and ease of implementation are some of the benefits of the mean and median imputation.
+- The imputation is performed using the existing information from the non-missing data; hence no additional data is required.
+- Mean and median imputation can provide a good estimate of the missing values, respectively for normally distributed data, and skewed data.
+
+Cons:
+- Not applicable for the categorical columns, can only work for numerical ones.
+- If there are outliers, then the mean will not be appropriate. In such cases, outliers need to be treated first. use the median value for imputation in the case of outliers. 
+- Mean imputation is sensitive to outliers and may not be a good representation of the central tendency of the data. Similarly to the mean, the median also may not better represent the central tendency.
+- Median imputation makes the assumption that the data is missing completely at random (MCAR), which is not always true. 
+- Change or Distortion in the original variance
+- Impacts Correlation
+
+### Impute missing values for categorical variable
+There are two ways to impute missing values for categorical features as follows:
+- Impute the Most Frequent Value
+- Impute the Value “Missing”
+*Mode is the most frequently occurring value. It is used in the case of categorical features.*
