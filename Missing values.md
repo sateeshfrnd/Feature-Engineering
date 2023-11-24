@@ -74,7 +74,14 @@ It is important to handle the missing values appropriately, since
 - Many machine learning algorithms fail if the dataset contains missing values. However, algorithms like K-nearest and Naive Bayes support data with missing values.
 - You may end up building a biased machine learning model, leading to incorrect results if the missing values are not handled properly.
 - Missing data can lead to a lack of precision in the statistical analysis.
-- 
+
+Finally, missing data corresponds to values that are, regardless of their proximity to the mean, mistakes or typos in the data. They can be of numeric, ordinal, or nominal types.
+
+Note:
+- *numeric* data is always represented by numbers that can be measured
+- *nominal* data refers to text data that does not follow a rank
+- *ordinal* data refers to text data that follows a rank or order.
+
 ## Strategies to handle missing values
 Below are the list of popular strategies to handle missing values in a dataset:
 
