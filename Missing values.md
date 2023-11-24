@@ -15,15 +15,16 @@ When not appropriately handled, missing data can bias the results of the machine
 The handling of missing data is very important during the preprocessing of the dataset as many machine learning algorithms do not support missing values.
 
 ## What is a Missing Value 
-Missing value is defined as the values or data that is not stored (or not present) for some variable/s in the given dataset.
+Most tables fed into machine learning problems are two-dimensional, meaning that they contain rows and columns. Conventionally, each row represents an observation (an instance), whereas each column represents a characteristic (feature) of each observation. Features where a few instances have values, as well as instances where there are no values for any feature, are considered missing data. In other words,the values or data that is not stored (or not present) for some variable/s in the given dataset.
 
 Missing Value are represented in a Dataset:
 - In the dataset, the blank shows the missing values.
 - In Pandas, usually missing values are represented by NaN. It stands for Not a Number.
 
+As you can see from the following image, you can see the columns 'age' and 'deck' have some missing values.
+
 ![image](https://github.com/sateeshfrnd/Feature-Engineering/assets/8160366/98bdcc11-a03b-46e5-b388-ce711bcf45c1)
 
-This is a sample of the missing data from the Titanic dataset. You can see the columns 'age' and 'deck' have some missing values.
 
 ## Reasons for missing data from the dataset
 There can be multiple reasons why certain values are missing from the data. Reasons for the missing of data from the dataset affect the approach of handling missing data. So it’s necessary to understand why the data could be missing.
