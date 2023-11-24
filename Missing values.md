@@ -1,4 +1,4 @@
-# Handling missing values 
+# Missing values 
 # Table of Contents
 - [Introduction](#introduction)
 - [What is a Missing Value](#what-is-a-missing-value)
