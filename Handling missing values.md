@@ -3,7 +3,8 @@ Most tables fed into machine learning problems are two-dimensional, meaning that
 
 ![image](https://github.com/sateeshfrnd/Feature-Engineering/assets/8160366/330aacfa-1656-4664-b5ee-644c0461d138)
 
-Conventionally,*a feature missing more than 5 to 10% of its values is considered to be missing data*, and so needs to be dealt with. On the other hand, *all instances that have missing values for all features should be eliminated* as they do not provide any information to the model, and, on the contrary, may end up introducing bias.
+- Conventionally,*a feature missing more than 5 to 10% of its values is considered to be missing data*, and so needs to be dealt with. 
+- On the other hand, *all instances that have missing values for all features should be eliminated* as they do not provide any information to the model, and, on the contrary, may end up introducing bias.
 
 When dealing with a feature with a high absence rate, it is recommended to either eliminate it or fill it with values. The most popular ways to replace the missing values are as follows:
 - **Mean imputation:** Replacing missing values with the mean or median of the features' available values.
